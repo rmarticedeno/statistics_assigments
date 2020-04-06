@@ -1,0 +1,307 @@
+%===================================================================================
+% JORNADA CIENTÍFICA ESTUDIANTIL - MATCOM, UH
+%===================================================================================
+% Esta plantilla ha sido diseñada para ser usada en los artículos de la
+% Jornada Científica Estudiantil, MatCom.
+%
+% Por favor, siga las instrucciones de esta plantilla y rellene en las secciones
+% correspondientes.
+%
+% NOTA: Necesitará el archivo 'jcematcom.sty' en la misma carpeta donde esté este
+%       archivo para poder utilizar esta plantila.
+%===================================================================================
+
+
+
+%===================================================================================
+% PREÁMBULO
+%-----------------------------------------------------------------------------------
+\documentclass[a4paper,10pt,twocolumn]{article}
+
+%===================================================================================
+% Paquetes
+%-----------------------------------------------------------------------------------
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{jcematcom}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage[pdftex]{hyperref}
+%-----------------------------------------------------------------------------------
+% Configuración
+%-----------------------------------------------------------------------------------
+\hypersetup{colorlinks,%
+	    citecolor=black,%
+	    filecolor=black,%
+	    linkcolor=black,%
+	    urlcolor=blue}
+
+%===================================================================================
+
+
+
+%===================================================================================
+% Presentacion
+%-----------------------------------------------------------------------------------
+% Título
+%-----------------------------------------------------------------------------------
+\title{Informe del Primer Mini Proyecto de Estad\'istica}
+
+%-----------------------------------------------------------------------------------
+% Autores
+%-----------------------------------------------------------------------------------
+\author{\\
+	\name Roberto Marti Cede\~no \email \href{mailto:r.marti@estudiantes.matcom.uh.cu}{r.marti@estudiantes.matcom.uh.cu}
+	\\ \addr Grupo C412 \AND
+	\name Daniel Alberto Garc\'ia P\'erez \email \href{mailto:d.garcia@estudiantes.matcom.uh.cu}{d.garcia@estudiantes.matcom.uh.cu}
+	\\ \addr Grupo C412 \AND
+	\name Leonel Alejandro Garc\'ia L\'opez \email \href{mailto:l.garcia3@estudiantes.matcom.uh.cu}{l.garcia3@estudiantes.matcom.uh.cu}
+	\\ \addr Grupo C412}
+
+%-----------------------------------------------------------------------------------
+% Tutores
+%-----------------------------------------------------------------------------------
+\tutors{\\Msc. Dalia Diaz Sistachs, \emph{Facultad de Matemática y Computación, Universidad de La Habana} \\}
+
+%-----------------------------------------------------------------------------------
+% Headings
+%-----------------------------------------------------------------------------------
+\jcematcomheading{\the\year}{1-\pageref{end}}{A. Uno, A. Dos}
+
+%-----------------------------------------------------------------------------------
+\ShortHeadings{Primer Mini Proyecto de Estad\'istica}{Autores}
+%===================================================================================
+
+
+
+%===================================================================================
+% DOCUMENTO
+%-----------------------------------------------------------------------------------
+\begin{document}
+
+%-----------------------------------------------------------------------------------
+% NO BORRAR ESTA LINEA!
+%-----------------------------------------------------------------------------------
+\twocolumn[
+%-----------------------------------------------------------------------------------
+
+\maketitle
+
+%===================================================================================
+% Resumen y Abstract
+%-----------------------------------------------------------------------------------
+\selectlanguage{spanish} % Para producir el documento en Español
+
+%-----------------------------------------------------------------------------------
+% Resumen en Español
+%-----------------------------------------------------------------------------------
+\begin{abstract}
+
+	El Resumen en Español debe constar de $100$ a $200$ palabras y presentar de forma
+	clara y concisa el contenido fundamental del artículo.
+
+\end{abstract}
+
+%-----------------------------------------------------------------------------------
+% English Abstract
+%-----------------------------------------------------------------------------------
+\vspace{0.5cm}
+
+\begin{enabstract}
+
+  The English Abstract must have have $100$ to $200$ words, and present in a clear
+  and concise form the essentials of the article content.
+
+\end{enabstract}
+
+%-----------------------------------------------------------------------------------
+% Palabras clave
+%-----------------------------------------------------------------------------------
+\begin{keywords}
+	Separadas,
+	Por,
+	Comas.
+\end{keywords}
+
+%-----------------------------------------------------------------------------------
+% Temas
+%-----------------------------------------------------------------------------------
+\begin{topics}
+	Tema, Subtema.
+\end{topics}
+
+
+%-----------------------------------------------------------------------------------
+% NO BORRAR ESTAS LINEAS!
+%-----------------------------------------------------------------------------------
+\vspace{0.8cm}
+]
+%-----------------------------------------------------------------------------------
+
+
+%===================================================================================
+
+%===================================================================================
+% Introducción
+%-----------------------------------------------------------------------------------
+\section{Introducción}\label{sec:intro}
+%-----------------------------------------------------------------------------------
+  En esta sección puede incluir una presentación del dominio de su problema,
+  los objetivos y motivaciones fundamentales de su investigación así como un
+  resumen del estado del arte al respecto.
+
+%===================================================================================
+
+
+
+%===================================================================================
+% Desarrollo
+%-----------------------------------------------------------------------------------
+\section{Desarrollo}\label{sec:dev}
+%-----------------------------------------------------------------------------------
+  En esta sección (o secciones) incluya el contenido fundamental del artículo.
+  No es necesario tener una sección nombrada \emph{Desarrollo}, por el contrario,
+  nombre las secciones según el contenido que tratan.
+
+%-----------------------------------------------------------------------------------
+	\subsection{Organización del Documento}\label{sub:results}
+%-----------------------------------------------------------------------------------
+		Puede agregar secciones y subsecciones según sea necesario para organizar
+		de manera más coherente su artículo. Tenga en cuenta que un documento más
+		plano es más fácil de navegar y entender, pero las subsecciones relacionadas
+		deberían estar agrupadas en una sección común.
+
+		Los nombres de las secciones deben ir en mayúsculas, excepto para las
+		preposiciones, conjunciones, y otros vocablos auxiliares.
+
+		Empiece un nuevo párrafo cada vez que vaya a comenzar una idea nueva.
+
+%-----------------------------------------------------------------------------------
+	\subsection{Listas y Descripciones}\label{sub:lists}
+%-----------------------------------------------------------------------------------
+		Para producir listas enumeradas, use el siguiente estilo:
+
+%-----------------------------------------------------------------------------------
+		\begin{enumerate}
+			\item Primer Elemento
+			\item Segundo Elemento
+			%
+			\begin {enumerate}
+				\item {Segundo Elemento - Subitem Uno}
+				\item {Segundo Elemento - Subitem Dos}
+			\end {enumerate}
+			%
+		\end{enumerate}
+
+%-----------------------------------------------------------------------------------
+		Para producir descripciones, use el siguiente estilo:
+
+%-----------------------------------------------------------------------------------
+		\begin{description}
+			\item [Primer Elemento] con su respectiva descripción.
+			\item [Segundo Elemento] también con su respectiva descripción.
+		\end{description}
+
+%-----------------------------------------------------------------------------------
+	\subsection{Figuras}\label{sub:figures}
+%-----------------------------------------------------------------------------------
+		Para producir cuerpos flotantes (figuras ó tablas), asegúrese de numerar
+		y etiquetar correctamente cada figura. Las referencias a las figuras deben
+		estar también correctamente etiquetadas. Por ejemplo, en la Fig. \ref{fig:ex}
+		se muestra\ldots.
+
+		\begin{figure}[htb]%
+		\begin{center}
+			\emph{Aquí va el contenido de la figura \ldots}
+		\end{center}
+		\caption{Figura de ejemplo \label{fig:ex}}%
+		\end{figure}
+
+%-----------------------------------------------------------------------------------
+	\subsection{Código Fuente}\label{sub:listings}
+%-----------------------------------------------------------------------------------
+		Para producir código fuente, envuélvalo en una figura flotante y
+		etiquételo correctamente. Por ejemplo, en la Fig. \ref{fig:code}
+		se muestra un código bastante conocido\ldots.
+
+		% Configuración de Listings
+		\lstset{keywordstyle=\color{blue}, basicstyle=\small}
+
+		\begin{figure}[htb]%
+			\begin{lstlisting}[language=c]%
+
+    int main(int argc, char** argv)
+    {
+        // Imprimiendo "Hola Mundo".
+        printf("Hello, World");
+    }
+
+			\end{lstlisting}
+		\caption{Código fuente de ejemplo.\label{fig:code}}
+		\end{figure}
+
+%-----------------------------------------------------------------------------------
+	\subsection{Referencias}
+%-----------------------------------------------------------------------------------
+  	Las referencias deben estar agrupadas en una sección al final del artículo,
+  	y las citas numeradas correctamente, por ejemplo \cite{knuth} ó \cite{goedel}.
+  	Incluya toda la información importante de cada referencia, incluídos autor,
+  	título, y notas de la edición. En caso de citar sitios web, además
+  	de la URL, incluya la fecha en que fue consultado, como en \cite{wiki}.
+
+%===================================================================================
+
+
+
+%===================================================================================
+% Conclusiones
+%-----------------------------------------------------------------------------------
+\section{Conclusiones}\label{sec:conc}
+
+  En esta sección puede incluir las conclusiones de su investigación y las ideas
+  sobre la continuidad del trabajo, en el caso que aplique.
+
+%===================================================================================
+
+
+
+%===================================================================================
+% Recomendaciones
+%-----------------------------------------------------------------------------------
+\section{Recomendaciones}\label{sec:rec}
+
+  En esta sección puede incluir recomendaciones sobre posibles formas de continuar
+  la investigación u otros temas relacionados.
+
+%===================================================================================
+
+
+
+%===================================================================================
+% Bibliografía
+%-----------------------------------------------------------------------------------
+\begin{thebibliography}{99}
+%-----------------------------------------------------------------------------------
+	\bibitem{knuth} Donald E. Knuth. \emph{The Art of Computer Programming}.
+		Volume 1: Fundamental Algorithms (3rd~edition), 1997.
+		Addison-Wesley Professional.
+
+	\bibitem{goedel} Kurt Göedel. \emph{Über formal unentscheidbare Sätze der
+		Principia Mathematica und verwandter Systeme, I}.
+		Monatshefte für Mathematik und Physik 38.
+
+	\bibitem{wiki} Wikipedia. URL: \href{http://en.wikipedia.org}
+	  {http://en.wikipedia.org}.
+		Consultado en \today.
+
+%-----------------------------------------------------------------------------------
+\end{thebibliography}
+
+%-----------------------------------------------------------------------------------
+
+\label{end}
+
+\end{document}
+
+%===================================================================================
