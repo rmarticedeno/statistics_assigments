@@ -318,3 +318,9 @@ vignettes/*.pdf
 
 # pkgdown site
 docs/
+
+Code.Rproj
+
+ejercicio*.jpg
+
+*cp6.pdf
