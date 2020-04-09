@@ -67,7 +67,7 @@
 %-----------------------------------------------------------------------------------
 % Headings
 %-----------------------------------------------------------------------------------
-\jcematcomheading{\the\year}{1-\pageref{end}}{A. Uno, A. Dos}
+\jcematcomheading{\the\year}{1-\pageref{end}}{Roberto Marti Cede\~no , Daniel Alberto Garc\'ia P\'erez, Leonel Alejandro Garc\'ia L\'opez}
 
 %-----------------------------------------------------------------------------------
 \ShortHeadings{Primer Mini Proyecto de Estad\'istica}{Roberto Marti Cede\~no , Daniel Alberto Garc\'ia P\'erez, Leonel Alejandro Garc\'ia L\'opez}
@@ -216,43 +216,90 @@
 	\end{enumerate}
 
 %-----------------------------------------------------------------------------------
-	\subsection{Figuras}\label{sub:figures}
+	\section{Respuestas}\label{sub:answers}
 %-----------------------------------------------------------------------------------
-		Para producir cuerpos flotantes (figuras ó tablas), asegúrese de numerar
-		y etiquetar correctamente cada figura. Las referencias a las figuras deben
-		estar también correctamente etiquetadas. Por ejemplo, en la Fig. \ref{fig:ex}
-		se muestra\ldots.
-
-		\begin{figure}[htb]%
+		Para dar respuesta a los ejercicios propuestos nos basamos en la búsqueda de la recta de mejor ajuste para los datos mediante el método de los mínimos cuadrados. 
+		
+		Para poder encontrar la pendiente de la recta de mejor ajuste empleamos la siguiente fórmula computacional:
+		
 		\begin{center}
-			\emph{Aquí va el contenido de la figura \ldots}
+			$b_1 = \frac{SS(xy)}{SS(x)}$
+			$b_0 = \frac{\sum y - (b_1 * \sum x)}{n}$
 		\end{center}
-		\caption{Figura de ejemplo \label{fig:ex}}%
-		\end{figure}
-
-%-----------------------------------------------------------------------------------
-	\subsection{Código Fuente}\label{sub:listings}
-%-----------------------------------------------------------------------------------
-		Para producir código fuente, envuélvalo en una figura flotante y
-		etiquételo correctamente. Por ejemplo, en la Fig. \ref{fig:code}
-		se muestra un código bastante conocido\ldots.
-
-		% Configuración de Listings
-		\lstset{keywordstyle=\color{blue}, basicstyle=\small}
-
-		\begin{figure}[htb]%
-			\begin{lstlisting}[language=c]%
-
-    int main(int argc, char** argv)
-    {
-        // Imprimiendo "Hola Mundo".
-        printf("Hello, World");
-    }
-
-			\end{lstlisting}
-		\caption{Código fuente de ejemplo.\label{fig:code}}
-		\end{figure}
-
+	
+		\begin{center}
+			$SS(xy) = \sum xy - \frac{\sum x \sum y}{n}$
+			$SS(x) = \sum x^2 - \frac{(\sum x)^2}{n}$
+		\end{center}
+		
+		De donde obtenemos la recta:
+		
+		\begin{center}
+			$y = b_0 + b_1x$
+		\end{center}
+	
+		y con ella podemos estimar valores dentro del dominio de nuestros datos.
+		
+		\subsection{Ejercicios 1 y 2}
+			Tras procesar los datos obtuvimos los siguientes gráficos de dispersión junto a su recta de ajuste.
+			
+			\begin{figure}[h]
+				\includegraphics[width=\linewidth]{Images/ejercicio1.jpeg}
+			\end{figure}
+		
+			\begin{figure}[htb]
+				\includegraphics[width=\linewidth]{Images/ejercicio2.jpeg}
+			\end{figure}
+		
+			\subsubsection{Ejercicio 1}
+			
+			Con ecuación de mejor ajuste:
+			
+			\begin{center}
+				$y = 1.522581 + 0.7677419x$
+			\end{center}
+			
+			Para $x = 1$ se estima un valor de $y = 2.29032258064516$.
+			
+			\subsubsection{Ejercicio 2}
+			
+			Con ecuación de mejor ajuste:
+			
+			\begin{center}
+				$y = 9.666667 + 3x$
+			\end{center}
+			
+			
+			Para $x = 0$ se estima el mismo valor de $b_0$, $y = 9.666667$.
+			
+			Para $x = 2$ se estima un valor de $y = 15.666667$.
+		
+		\subsection{Ejercicio 3}
+			Comenzamos en este ejercicio mostrando la gráfica de dispersión.
+			
+			\begin{figure}[htb]
+				\includegraphics[width=\linewidth]{Images/ejercicio3norecta.jpeg}
+			\end{figure}
+		
+			De donde nos podemos percatar que los datos forman casi una línea recta. Y al evaluar el espectro de los mismos nos percatamos que no se incumple ninguna de los requerimientos del modelo lineal.
+			
+			Tras los cálculos realizados, llegamos a que la recta que mejor ajusta el modelo es :
+			
+			\begin{center}
+				$y = 1.766077 + 0.08028379x$
+			\end{center}
+		
+			Una de las conclusiones que podemos obtener de la misma es que por cada incremento unitario en la velocidad de las corredoras aumentan sus pasos promedios en 0.08028379 aproximadamente.
+			
+			Tomando en cuenta nuestro modelo y nuestros datos, para una velocidad de 19 pies por segundo obtenemos un promedio de 3.29146911253888 para su rapidez.
+		
+			\begin{figure}[htb]
+				\includegraphics[width=\linewidth]{Images/ejercicio3.jpeg}
+			\end{figure}
+		
+			Uno de los errores más comunes a la hora de predecir comportamientos sobre el modelo creado radica en la mala utilización del dominio de los datos. Este es el caso que tenemos si le queremos dar una interpretación a la rapidez de pasos con velocidad 0. Aca incurrimos en dos problemas, el primero en que nos salimos del dominio de los datos y segundo que para una velocidad 0, resulta ilógico tener 1.766077 pasos en promedio.
+		
+					
 %-----------------------------------------------------------------------------------
 	\subsection{Referencias}
 %-----------------------------------------------------------------------------------
