@@ -71,11 +71,20 @@ print(paste("El valor estimado de la función para x = 2 es: ",ecuation2(2)))
 
 ## Section Ejercicio 3
 
+jpeg("../Images/ejercicio3norecta.jpeg")
+
+plot(ejercicio3$X,ejercicio3$Y,
+     xlab="Velocidad (ft/s)",
+     ylab="Rapidez de pasos",main = 'Gráfico de Dispersión. (Ejercicio 3)')
+
+dev.off()
+
 jpeg("../Images/ejercicio3.jpeg")
 
 plot(ejercicio3$X,ejercicio3$Y,
      xlab="Velocidad (ft/s)",
      ylab="Rapidez de pasos",main = 'Gráfico de Dispersión con recta de mejor ajuste. (Ejercicio 3)')
+
 
 fit3 <- lm(Y ~ X, data=ejercicio3)
 
