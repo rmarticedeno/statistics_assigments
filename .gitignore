@@ -324,3 +324,12 @@ Code.Rproj
 *ejercicio*.jpeg
 
 *cp6.pdf
+
+# Latex extensions
+
+*.odt
+*.sty
+*.aux
+*.log
+*.synctex.gz
+*.tex
